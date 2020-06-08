@@ -1,0 +1,8 @@
+imageio==2.4.1
+praw
+requests
+urllib3
+keyboard
+pillow
+beautifulsoup4
+instabot
