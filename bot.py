@@ -59,7 +59,7 @@ if not os.path.exists(POSTED_CACHE):
         pass
 if not os.path.exists(filePath):
     os.makedirs(filePath)
-def already_tweeted(post_id):
+def already_uploaded(post_id):
     ''' Checks if the reddit insta bot has already posted the image. '''
     found = False
     with open(POSTED_CACHE, 'r') as in_file:
@@ -140,7 +140,7 @@ for x in range(numRounds):
                 # except:
                 #         print("scratch that, next post.")
                 #         continue
-                if IsImageLink(url) and not already_tweeted(submission.id):
+                if IsImageLink(url) and not already_uploaded(submission.id):
                     try:
                         img=requests.get(submission.url)
                         filename=str(counter)+'.'+IsImageLink(submission.url)
